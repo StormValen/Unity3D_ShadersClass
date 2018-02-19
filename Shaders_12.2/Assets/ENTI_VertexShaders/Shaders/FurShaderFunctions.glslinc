@@ -1,0 +1,6 @@
+﻿vec3 CalcFurPosition(vec3 Position, vec3 Normal, float IdLayer, float TotalLayers, float _FurLength)
+{
+	float layer = (IdLayer+1) / TotalLayers;
+	float length = _FurLength * layer;
+	return Position+Normal*length;
+}
